@@ -1,0 +1,113 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="SmartLit"
+        android:textColor="@color/textPrimary"
+        android:textStyle="bold"
+        android:textSize="34sp"
+        android:layout_marginTop="20dp" />
+
+    <!-- Light Control Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/cardBackground"
+        android:layout_below="@id/main">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Light Toggle -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_lightbulb"
+                    android:tint="@color/primaryGradientEnd" />
+
+                <TextView
+                    android:id="@+id/outdoorLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Outdoor Light"
+                    android:textColor="@color/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+                <Switch
+                    android:id="@+id/btnToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:thumbTint="@color/primaryGradientEnd" />
+            </LinearLayout>
+
+            <!-- Brightness Slider -->
+            <TextView
+                android:id="@+id/brightnessLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Adjust Brightness"
+                android:textColor="@color/textSecondary"
+                android:textSize="18sp" />
+
+            <SeekBar
+                android:id="@+id/brightnessSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="50"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/brightnessValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Brightness: 50%"
+                android:textColor="@color/textSecondary"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Add Device Button -->
+    <Button
+        android:id="@+id/btnAddDevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="Add New Device"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/buttonColor"
+        android:padding="15dp"
+        android:textSize="16sp"
+        android:elevation="8dp"
+        android:layout_gravity="center" />
+
+</RelativeLayout>
