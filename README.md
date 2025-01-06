@@ -1,0 +1,2 @@
+# SmartLit
+Our SmartLit application
